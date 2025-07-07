@@ -1,0 +1,42 @@
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .blogHolder {
+    padding: 0;
+  }
+  .story-container {
+    padding: 10px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-container img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .story-text-container {
+    max-width: 600px;
+  }
+
+  .story-text-container h2 {
+    font-size: 20px;
+  }
+
+  .story-text-container p {
+    font-size: 12px;
+  }
+}
