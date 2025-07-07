@@ -1,0 +1,45 @@
+.logo {
+  position: absolute;
+  top: 5%;
+  left: 98%;
+  transform: translate(-179%, 30%);
+}
+
+.xiaoLogo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid #470761;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px #0000004d;
+}
+
+.icon {
+  position: absolute;
+  top: 5%;
+  left: 98%;
+  transform: translate(-80%, 350%);
+}
+
+.ventiIcon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.ventiMushroom {
+  position: absolute;
+  bottom: 90%;
+  right: 0;
+}
+
+.mushroomIcon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.mushroomIcon:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}

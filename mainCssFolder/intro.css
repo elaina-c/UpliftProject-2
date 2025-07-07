@@ -1,0 +1,77 @@
+main {
+  flex: 1;
+}
+
+.websiteIntro {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  padding-left: 0;
+}
+
+.aboutWebsite {
+  width: 48%;
+  min-width: 250px;
+  height: 400px;
+  background: linear-gradient(135deg, #2e003e, #081d3d, #61328a, #140e5e);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  margin-left: -200px;
+  margin-top: 30px;
+}
+
+.introText {
+  font-size: 30px;
+  color: #fff;
+  text-align: left;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.introText b {
+  color: #cb8aff;
+  font-size: 40px;
+  text-shadow: 1px 1px 3px #3d0861;
+  display: inline-block;
+}
+
+.highlight {
+  font-size: 40px;
+  font-weight: bold;
+  color: #9267e2;
+}
+
+.highlight2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #e267d8;
+}
+
+.highlight3 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #a1b1f7;
+}
+
+.imgIntroContainer {
+  width: 30%;
+  height: 400px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 30px;
+  border: 1px solid #fffdfd;
+}
+
+.leftImg {
+  width: 500px;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  background-image: url("../pictures/AiLeft.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

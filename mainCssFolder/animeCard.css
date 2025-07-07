@@ -1,0 +1,71 @@
+#animeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  background-color: black;
+  margin: 20px;
+  margin-top: 10;
+  border-radius: 20px;
+}
+
+.animeCard {
+  background-image: url(../pictures/ANIMEBACKGROUND.jpg);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #ffffff;
+  margin: 15px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.animeImg {
+  width: 180px;
+  border-radius: 5px;
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.animeCard:hover {
+  transform: scale(1.05);
+}
+
+.animeDescription {
+  text-align: left;
+}
+
+.animeDescription p {
+  font-size: 15px;
+  color: #fff;
+  margin: -5px;
+}
+.animeDescription b {
+  color: #b673e4;
+}
+.animeCard h2 {
+  color: #fff;
+}
+
+footer {
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  margin-top: 50px;
+  font-size: 14px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    #2e003e,
+    #081d3d,
+    #61328a,
+    #140e5e,
+    #2e003e
+  );
+}
+
+.cardContainer {
+  flex: 1;
+}

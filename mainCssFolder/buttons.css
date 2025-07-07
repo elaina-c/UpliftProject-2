@@ -1,0 +1,31 @@
+.pageButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+.pageButton button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  background-color: #35063b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.pageButton button:hover {
+  transform: scale(1.05);
+}
+
+.nextButton,
+.backButton {
+  display: none;
+}
+
+.noAnimeFound {
+  color: #fff;
+}
