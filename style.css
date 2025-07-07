@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("pictures/ANIMEBACKGROUND.jpg");
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: linear-gradient(
+    135deg,
+    #2e003e,
+    #081d3d,
+    #61328a,
+    #140e5e,
+    #2e003e
+  );
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  z-index: 999;
+}
+
+h1 {
+  margin: 0;
+  font-size: 25px;
+  color: #f06292;
+  text-shadow: 2px 2px 5px black;
+  margin-top: 10px;
+}
+
+.p.pink {
+  color: #f06292;
+}
+
+.white {
+  color: #ffffff;
+  margin-right: -3px;
+  margin-left: -3px;
+}
+
+.violet {
+  color: #ee82ee;
+}
+
+.pink,
+.white,
+.violet {
+  text-shadow: 1px 1px 3px #000;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+#searchBox {
+  padding: 10px;
+  width: 200px;
+  font-size: 10px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  color: #fff;
+  border: 1px solid #ffffff;
+  transition: transform 0.2s ease;
+  background-image: url("pictures/ANIMEBACKGROUND.jpg");
+}
+
+::placeholder {
+  color: #fff;
+}
+
+#searchAnimeButton {
+  border-radius: 50px;
+  font-size: 15px;
+  border: 1px solid #ffffff;
+  transition: transform 0.2s ease;
+  margin-bottom: 9px;
+  background-image: url("pictures/ANIMEBACKGROUND.jpg");
+}
+
+#searchBox:hover,
+#searchAnimeButton:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>Anime Browser App</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="mainCssFolder/animeCard.css" />
+    <link rel="stylesheet" href="mainCssFolder/blog.css" />
+    <link rel="stylesheet" href="mainCssFolder/icon_and_Logo.css" />
+    <link rel="stylesheet" href="mainCssFolder/intro.css" />
+    <link rel="stylesheet" href="mainCssFolder/navBar.css" />
+    <link rel="stylesheet" href="mainCssFolder/buttons.css" />
+    <link rel="stylesheet" href="mainCssFolder/Animation.css" />
+
+    <link rel="stylesheet" href="mediaCss/media.css" />
+    <link rel="stylesheet" href="mediaCss/mediaIntro.css" />
+    <link rel="stylesheet" href="mediaCss/mediaBlog.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <span class="pink">✨AI</span>
+        <span class="white">LOVE</span>
+        <span class="violet">ANIME✨</span>
+      </h1>
+
+      <div class="searchContainer">
+        <input type="text" id="searchBox" placeholder="Search for anime..." />
+        <button id="searchAnimeButton">🔍</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="websiteIntro">
+        <div class="imgIntroContainer">
+          <div class="icon">
+            <img
+              src="pictures/ventiPinkLily.png"
+              class="ventiIcon jumpItem"
+              alt="logo"
+            />
+          </div>
+          <img src="pictures/AiLeft.png" class="leftImg" />
+        </div>
+        <div class="aboutWebsite">
+          <div class="logo">
+            <img src="pictures/xiaoLogo.png" class="xiaoLogo" alt="logo" />
+          </div>
+          <div class="introText">
+            <h2>
+              Welcome to<br />
+              <b>AI LOVE ANIME</b>
+            </h2>
+            <p>
+              Find your next
+              <span class="highlight"> Favorite anime</span> among the latest
+              and greatest in the anime world! Search top
+              <span class="highlight2">Titles</span>, explore what's trending,
+              and uncover hidden <span class="highlight3">stars</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="loadingSpinner" class="spinner" style="display: none"></div>
+
+      <div class="cardContainer">
+        <div class="navBar">
+          <nav>
+            <a href="index.html">Anime</a>
+            <a href="blog.html">Blog</a>
+          </nav>
+        </div>
+
+        <div class="blogHolder">
+          <div class="story-container">
+            <div class="image-container">
+              <img src="blogPictures/blogPicture1.jpg" alt="Story 2" />
+            </div>
+            <div class="story-text-container">
+              <h2>Searching for a Start</h2>
+              <p>
+                At first, I didn’t know what to build for our second web
+                project. I love anime, but working with APIs felt scary. I
+                didn’t understand how they worked. I tried following tutorials
+                and guides, but they just confused me more. That’s when I
+                realized: I can’t understand something big without learning the
+                basics first. So, I went back to JavaScript fundamentals. I
+                reviewed
+                <code>async</code>, <code>await</code>, and watched videos from
+                our Moodle and YouTube. I wasn’t done with all the activities,
+                but I finally <em>understood enough</em> to begin.
+              </p>
+            </div>
+          </div>
+
+          <div class="story-container">
+            <div class="image-container">
+              <img src="blogPictures/blogPicture2.jpg" alt="Story 2" />
+            </div>
+            <div class="story-text-container">
+              <h2>From Confusion to Clarity</h2>
+              <p>
+                I struggled so hard just to find the right API. I looked at some
+                sites, even GitHub links, but most of them were hard to
+                understand. Some were broken. Others were for Pokémon or things
+                I didn’t care about. But then... I found the
+                <strong>Jikan API</strong>. An anime API. I clicked it, explored
+                it, and thought: <em>“This is it.”</em> Finally, I found
+                something I connected with. It made everything more exciting.
+              </p>
+            </div>
+          </div>
+
+          <div class="story-container">
+            <div class="image-container">
+              <img src="blogPictures/blogPicture3.jpg" alt="Story 3" />
+            </div>
+            <div class="story-text-container">
+              <h2>Building My App</h2>
+              <p>
+                I started by building the HTML structure and connecting the
+                JavaScript file. I added a search bar, and my first goal was
+                just to get the anime data to appear in the console. It worked!
+                Then came the CSS — just enough to move my anime results out of
+                the console and into the actual webpage. That moment when I saw
+                the anime images <em>on the screen</em>? I was so proud.
+              </p>
+            </div>
+          </div>
+
+          <div class="story-container">
+            <div class="image-container">
+              <img src="blogPictures/blogPicture4.jpg" alt="Story 4" />
+            </div>
+            <div class="story-text-container">
+              <h2>Dealing with Errors & Feeling Stuck</h2>
+              <p>
+                I saw so many console errors. Some were about limits, others
+                were bugs I didn’t even understand. I didn’t know whether to fix
+                them now or later. I was overwhelmed. But I remembered how
+                indecisive I was during our first project. So this time, I told
+                myself:
+                <em>Focus on functionality first. Fix the errors later.</em>
+                That mindset helped me push through.
+              </p>
+            </div>
+          </div>
+
+          <div class="story-container">
+            <div class="image-container">
+              <img src="blogPictures/blogPicture5.jpg" alt="Story 5" />
+            </div>
+            <div class="story-text-container">
+              <h2>Random Button & Input Features</h2>
+              <p>
+                I added a feature where you could search any anime — even by
+                just typing the first letter. If nothing is typed, it shows a
+                random list of anime. I also added features like hitting “Enter”
+                to search, and the input auto-focuses when the page loads. I
+                reused some code from our number guessing game (shoutout to my
+                notes!).
+              </p>
+            </div>
+          </div>
+
+          <div class="story-container">
+            <div class="image-container">
+              <img src="blogPictures/blogPicture6.jpg" alt="Story 6" />
+            </div>
+            <div class="story-text-container">
+              <h2>From Design Anxiety to Animation Delight</h2>
+              <p>
+                In my first project, I focused too much on design and forgot
+                functionality. So now, I did the opposite: functionality first,
+                design later. But when it was time to design... I froze again. I
+                spent <strong>2 hours and 30 minutes</strong> just choosing one
+                photo. I was that indecisive. I was inspired by
+                <strong>Ai from Oshi no Ko</strong> (yes, the character who died
+                in Ep 1 I cried). I designed a banner with her beautiful and
+                death face on opposite sides and titled my app:
+                <em>“Ai Love Anime.”</em> (Get it? “I love anime” 😆).
+              </p>
+            </div>
+          </div>
+
+          <div class="story-container">
+            <div class="image-container">
+              <img src="blogPictures/blogPicture7.jpg" alt="Story 7" />
+            </div>
+            <div class="story-text-container">
+              <h2>Letting Go of the Movie Feature</h2>
+              <p>
+                I wanted to include movies too. I even had ideas for using
+                Genshin characters like Xiao and Kinu in different nav sections.
+                But time was running out, and the more I added, the more I
+                struggled. So I dropped the movie idea. And I’m glad I did. The
+                anime browser itself was enough. It works. It’s functional. And
+                I can always expand it later.
+              </p>
+            </div>
+          </div>
+
+          <div class="story-container">
+            <div class="image-container">
+              <img src="blogPictures/blogPicture8.jpg" alt="Story 8" />
+            </div>
+            <div class="story-text-container">
+              <h2>Making It Mobile-Ready</h2>
+              <p>
+                I tested the app on desktop, tablet, and phone. It was hard to
+                make the images fit, especially when they looked squished or
+                uneven. But I kept adjusting. Now, it looks good across all
+                devices — though the card alignment still bothers me a little.
+                I’ll fix it soon.
+              </p>
+            </div>
+          </div>
+
+          <div class="story-container">
+            <div class="image-container">
+              <img src="blogPictures/blogPicture9.jpg" alt="Story 9" />
+            </div>
+            <div class="story-text-container">
+              <h2>The Final Touches</h2>
+              <p>
+                I added a description box so users know what the website is
+                about. I included cute jumping characters to give it life. The
+                colors? Pink and violet — my favorite combo. And even though I
+                was tired, burned out, and sick of picking designs... I was
+                proud. I learned so much. From not knowing what an API was, to
+                building something real. Something mine.
+              </p>
+            </div>
+          </div>
+
+          <div class="story-container">
+            <div class="image-container">
+              <img src="blogPictures/blogPicture10.jpg" alt="Story 20" />
+            </div>
+            <div class="story-text-container">
+              <h2>What I Learned</h2>
+              <p>
+                This project taught me more than just code. It taught me
+                patience. That errors don’t mean failure. That being indecisive
+                is okay, as long as you keep going. I spent 6 to 22 hours a day
+                building this. I forgot how I even did some of it. But I’m
+                proud. And even if I don’t get everything perfect, I know one
+                thing:
+                <em>I built an anime browser app. I did it.</em> Thank you for
+                reading.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="scriptAnime.js"></script>
+
+    <footer>
+      <p>Made with ❤️ by Elaine | Powered by Jikan API</p>
+    </footer>
+  </body>
+</html>
