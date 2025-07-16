@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anime Browser App</title>
     <link rel="stylesheet" href="style.css" />
 
@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="mediaCss/media.css" />
     <link rel="stylesheet" href="mediaCss/mediaIntro.css" />
     <link rel="stylesheet" href="mediaCss/mediaBlog.css" />
+
+    <script src="scriptAnime.js" defer></script>
+    <script src="eventListener.js" defer></script>
+    <script src="display.js" defer></script>
   </head>
   <body>
     <header>
@@ -42,17 +46,14 @@
               alt="logo"
             />
           </div>
-          <img src="pictures/AiLeft.png" class="leftImg" />
+          <div class="leftImg"></div>
         </div>
         <div class="aboutWebsite">
           <div class="logo">
             <img src="pictures/xiaoLogo.png" class="xiaoLogo" alt="logo" />
           </div>
           <div class="introText">
-            <h2>
-              Welcome to<br />
-              <b>AI LOVE ANIME</b>
-            </h2>
+            <h2>Welcome to<br /><b>AI LOVE ANIME</b></h2>
             <p>
               Find your next
               <span class="highlight"> Favorite anime</span> among the latest
@@ -256,9 +257,8 @@
           </div>
         </div>
       </div>
+      <button id="backToTopBtn" title="Go to top">↑ Top</button>
     </main>
-
-    <script src="scriptAnime.js"></script>
 
     <footer>
       <p>Made with ❤️ by Elaine | Powered by Jikan API</p>

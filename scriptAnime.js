@@ -3,6 +3,7 @@ const animeContainer = document.getElementById("animeContainer");
 const searchAnime = document.getElementById("searchAnimeButton");
 const nextPageButton = document.getElementById("nextPageButton");
 const backPageButton = document.getElementById("backPageButton");
+const backToTopBtn = document.getElementById("backToTopBtn");
 
 let currentPage = 1;
 let currentQuery = "";
@@ -15,21 +16,73 @@ function hideSpinner() {
   document.getElementById("loadingSpinner").style.display = "none";
 }
 
+function loadAnimePage() {
+  if (currentQuery === "") {
+    getLatestAnime(currentPage).then(({ anime, hasNext }) => {
+      displayAnime(anime);
+      updatePageButtons(hasNext);
+    });
+  } else {
+    getAnime(currentQuery, currentPage).then(({ anime, hasNext }) => {
+      displayAnime(anime);
+      updatePageButtons(hasNext);
+    });
+  }
+}
+
 function searchInput() {
   const animeTitle = searchBox.value.trim();
-
   currentQuery = animeTitle;
   currentPage = 1;
 
-  getAnime(currentQuery, currentPage).then((animeList) => {
-    displayAnime(animeList);
-    updatePageButtons();
-  });
+  loadAnimePage();
 
   searchBox.value = "";
   searchBox.focus();
-  nextPageButton.style.display = "inline";
-  backPageButton.style.display = "inline";
+}
+
+if (animeTitle === "") {
+  getLatestAnime(currentPage).then(({ anime, hasNext }) => {
+    displayAnime(anime);
+    updatePageButtons(hasNext);
+  });
+} else {
+  getAnime(currentQuery, currentPage).then(({ anime, hasNext }) => {
+    displayAnime(anime);
+    updatePageButtons(hasNext);
+  });
+}
+
+searchBox.value = "";
+searchBox.focus();
+nextPageButton.style.display = "inline";
+backPageButton.style.display = "inline";
+
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
+  ){
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+};
+
+async function getLatestAnime(page = 1) {
+  showSpinner();
+  try {
+    const res = await fetch(
+      `https://api.jikan.moe/v4/anime?order_by=popularity&sort=asc&page=${page}&limit=20`
+    );
+    const data = await res.json();
+    return { anime: data.data, hasNext: data.pagination.has_next_page };
+  } catch (error) {
+    console.error("Error fetching latest anime:", error);
+    return { anime: [], hasNext: false };
+  } finally {
+    hideSpinner();
+  }
 }
 
 async function getAnime(animeTitle, page = 1) {
@@ -48,85 +101,19 @@ async function getAnime(animeTitle, page = 1) {
     }
 
     const data = await res.json();
-    return data.data;
+    return { anime: data.data, hasNext: data.pagination.has_next_page };
   } catch (error) {
     console.error("Failed to fetch anime:", error);
-    return [];
+    return { anime: [], hasNext: false };
   } finally {
     hideSpinner();
   }
 }
 
-function displayAnime(animeList) {
-  animeContainer.innerHTML = "";
-
-  if (!animeList || animeList.length === 0) {
-    animeContainer.innerHTML = `<p class="noAnimeFound">No Anime found.</p>`;
-    return;
-  }
-
-  animeList.forEach((anime) => {
-    const animeCard = document.createElement("div");
-    animeCard.className = "animeCard";
-    animeCard.innerHTML = `
-      <img class="animeImg fadesUp" src="${anime.images.jpg.image_url}" />
-      <div class="animeDescription">
-      <h2>${anime.title} - ${anime.year ?? ""}</h2>
-      <p> 
-      ⭐ ${anime.score ?? "N/A"}<br>
-      ❤  ${anime.favorites ?? "N/A"} <br>
-      <b>Genre:</b> ${anime.genres.map((g) => g.name).join(", ") || "N/A"}<br>
-      <b>Episodes:</b> ${anime.episodes ?? "N/A"} <br>
-      <b>Status:</b> ${anime.status} <br>
-      <b>Broadcast:</b> ${anime.broadcast?.day ?? "Finished"}<br>
-      <b>Duration:</b> ${anime.duration ?? "N/A"} <br>
-      <b>Studio:</b> ${anime.studios.map((s) => s.name).join(", ") || "N/A"}
-      </p>
-      <div class="ventiMushroom">
-        <img src="pictures/ventiMushroom.png" class="mushroomIcon jumpItem" alt="logo" />
-      </div>
-    `;
-    animeContainer.appendChild(animeCard);
-  });
-}
-
-function updatePageButtons() {
+function updatePageButtons(hasNextPage) {
   backPageButton.disabled = currentPage === 1;
+  backPageButton.style.display = currentPage === 1 ? "none" : "inline-block";
+
+  nextPageButton.disabled = !hasNextPage;
+  nextPageButton.style.display = hasNextPage ? "inline-block" : "none";
 }
-
-searchInput();
-
-getAnime(currentQuery, currentPage).then((animeList) => {
-  displayAnime(animeList);
-  updatePageButtons();
-});
-
-searchAnime.addEventListener("click", searchInput);
-
-nextPageButton.addEventListener("click", () => {
-  currentPage++;
-  getAnime(currentQuery, currentPage).then((animeList) => {
-    displayAnime(animeList);
-    updatePageButtons();
-  });
-  searchBox.value = "";
-  searchBox.focus();
-});
-
-backPageButton.addEventListener("click", () => {
-  if (currentPage > 1) {
-    currentPage--;
-    getAnime(currentQuery, currentPage).then((animeList) => {
-      displayAnime(animeList);
-      updatePageButtons();
-    });
-    searchBox.value = "";
-    searchBox.focus();
-  }
-});
-
-searchBox.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    searchInput();
-  }
-});
