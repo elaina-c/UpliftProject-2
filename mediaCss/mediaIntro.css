@@ -14,10 +14,10 @@
 
   .websiteIntro {
     display: flex;
-    gap: 200px;
+    gap: 175px;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
   }
 
   .imgIntroContainer {
@@ -26,6 +26,7 @@
     align-items: center;
     z-index: 100;
     margin-left: 7px;
+    border-right: none;
   }
 
   .leftImg {
@@ -38,9 +39,11 @@
   }
 
   .aboutWebsite {
-    max-width: 20px;
-    max-height: 130px;
+    width: 50%;
+    max-width: 300px;
+    height: auto;
     object-fit: contain;
+    padding: 10px;
     margin-bottom: 20px;
   }
 

@@ -7,6 +7,10 @@
     overflow-x: hidden;
   }
 
+  html {
+    overflow-x: hidden;
+  }
+
   header {
     flex-direction: column;
     align-items: center;
