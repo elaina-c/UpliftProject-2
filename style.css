@@ -29,10 +29,15 @@ header {
   z-index: 999;
 }
 
-
 main {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 h1 {

@@ -23,69 +23,71 @@
     <script src="display.js" defer></script>
   </head>
   <body>
-    <header>
-      <h1>
-        <span class="pink">✨AI</span>
-        <span class="white">LOVE</span>
-        <span class="violet">ANIME✨</span>
-      </h1>
+    <div class="wrapper">
+      <header>
+        <h1>
+          <span class="pink">✨AI</span>
+          <span class="white">LOVE</span>
+          <span class="violet">ANIME✨</span>
+        </h1>
 
-      <div class="searchContainer">
-        <input type="text" id="searchBox" placeholder="Search for anime..." />
-        <button id="searchAnimeButton">🔍</button>
-      </div>
-    </header>
-
-    <main>
-      <div class="websiteIntro">
-        <div class="imgIntroContainer">
-          <div class="icon">
-            <img
-              src="pictures/ventiPinkLily.png"
-              class="ventiIcon jumpItem"
-              alt="logo"
-            />
-          </div>
-          <div class="leftImg"></div>
+        <div class="searchContainer">
+          <input type="text" id="searchBox" placeholder="Search for anime..." />
+          <button id="searchAnimeButton">🔍</button>
         </div>
-        <div class="aboutWebsite">
-          <div class="logo">
-            <img src="pictures/xiaoLogo.png" class="xiaoLogo" alt="logo" />
+      </header>
+
+      <main>
+        <div class="websiteIntro">
+          <div class="imgIntroContainer">
+            <div class="icon">
+              <img
+                src="pictures/ventiPinkLily.png"
+                class="ventiIcon jumpItem"
+                alt="logo"
+              />
+            </div>
+            <div class="leftImg"></div>
           </div>
-          <div class="introText">
-            <h2>Welcome to<br /><b>AI LOVE ANIME</b></h2>
-            <p>
-              Find your next
-              <span class="highlight"> Favorite anime</span> among the latest
-              and greatest in the anime world! Search top
-              <span class="highlight2">Titles</span>, explore what's trending,
-              and uncover hidden <span class="highlight3">stars</span>.
-            </p>
+          <div class="aboutWebsite">
+            <div class="logo">
+              <img src="pictures/xiaoLogo.png" class="xiaoLogo" alt="logo" />
+            </div>
+            <div class="introText">
+              <h2>Welcome to<br /><b>AI LOVE ANIME</b></h2>
+              <p>
+                Find your next
+                <span class="highlight"> Favorite anime</span> among the latest
+                and greatest in the anime world! Search top
+                <span class="highlight2">Titles</span>, explore what's trending,
+                and uncover hidden <span class="highlight3">stars</span>.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div id="loadingSpinner" class="spinner" style="display: none"></div>
+        <div id="loadingSpinner" class="spinner" style="display: none"></div>
 
-      <div class="cardContainer" id="cardContainer">
-        <div class="navBar">
-          <nav>
-            <a href="index.html">Anime</a>
-            <a href="blog.html">Blog</a>
-          </nav>
+        <div class="cardContainer" id="cardContainer">
+          <div class="navBar">
+            <nav>
+              <a href="index.html">Anime</a>
+              <a href="blog.html">Blog</a>
+            </nav>
+          </div>
+          <div id="animeContainer"></div>
         </div>
-        <div id="animeContainer"></div>
-      </div>
 
-      <div class="pageButton">
-        <button class="backButton" id="backPageButton">⏮</button>
-        <button class="nextButton" id="nextPageButton">⏭</button>
-      </div>
-      <button id="backToTopBtn" title="Go to top">↑ Top</button>
-    </main>
+        <div class="pageButton">
+          <button class="backButton" id="backPageButton">⏮</button>
+          <button class="nextButton" id="nextPageButton">⏭</button>
+        </div>
+        <button id="backToTopBtn" title="Go to top">↑ Top</button>
+      </main>
 
-    <footer>
-      <p>Made with ❤️ by Elaine | Powered by Jikan API</p>
-    </footer>
+      <footer>
+        <p>Made with ❤️ by Elaine | Powered by Jikan API</p>
+      </footer>
+    </div>
   </body>
 </html>
