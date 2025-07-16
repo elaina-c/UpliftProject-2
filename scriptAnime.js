@@ -4,6 +4,7 @@ const searchAnime = document.getElementById("searchAnimeButton");
 const nextPageButton = document.getElementById("nextPageButton");
 const backPageButton = document.getElementById("backPageButton");
 const backToTopBtn = document.getElementById("backToTopBtn");
+const cardContainer = document.getElementById("cardContainer");
 
 let currentPage = 1;
 let currentQuery = "";
@@ -62,7 +63,7 @@ window.onscroll = function () {
   if (
     document.body.scrollTop > 300 ||
     document.documentElement.scrollTop > 300
-  ){
+  ) {
     backToTopBtn.style.display = "block";
   } else {
     backToTopBtn.style.display = "none";

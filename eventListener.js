@@ -32,13 +32,13 @@ searchBox.addEventListener("keydown", (e) => {
 nextPageButton.addEventListener("click", () => {
   currentPage++;
   loadAnimePage();
-  searchBox.focus();
+  cardContainer.scrollIntoView({ behavior: "smooth" });
 });
 
 backPageButton.addEventListener("click", () => {
   if (currentPage > 1) {
     currentPage--;
     loadAnimePage();
-    searchBox.focus();
+    cardContainer.scrollIntoView({ behavior: "smooth" });
   }
 });

@@ -21,7 +21,7 @@
   }
 
   .imgIntroContainer {
-    max-width: 250px;
+    max-width: 200px;
     max-height: 150px;
     align-items: center;
     z-index: 100;
@@ -29,7 +29,7 @@
   }
 
   .leftImg {
-    width: 250px;
+    width: 200px;
     height: 150px;
     background-image: url("../pictures/AiLeft.png");
     background-position: center;
@@ -39,8 +39,9 @@
 
   .aboutWebsite {
     max-width: 20px;
-    max-height: 150px;
+    max-height: 130px;
     object-fit: contain;
+    margin-bottom: 20px;
   }
 
   .logo {
@@ -52,15 +53,15 @@
   }
 
   .introText p {
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .introText h2 {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .introText h2 b {
-    font-size: 18px;
+    font-size: 15px;
   }
   .introText .highlight,
   .introText .highlight2,
