@@ -29,6 +29,12 @@ header {
   z-index: 999;
 }
 
+
+main {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 h1 {
   margin: 0;
   font-size: 25px;
