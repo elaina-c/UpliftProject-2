@@ -74,4 +74,9 @@
     font-size: 14px;
     padding: 8px 16px;
   }
+
+  .navBar a {
+    font-size: 10px;
+  }
+
 }

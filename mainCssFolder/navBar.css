@@ -10,8 +10,9 @@
 
 .navBar a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   transition: transform 0.2s ease;
+  margin-bottom: 10px;
 }
 
 .navBar a:hover {
@@ -24,9 +25,8 @@
   gap: 20px;
   font-size: 20px;
   padding: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  background-color: black;
+  border-radius: 10px;
+  background-color: #000000;
   text-decoration: none;
   margin-bottom: -50px;
 }

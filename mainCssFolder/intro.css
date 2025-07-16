@@ -18,7 +18,7 @@ main {
   background: linear-gradient(135deg, #2e003e, #081d3d, #61328a, #140e5e);
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px #00000080;
   margin-left: -200px;
   margin-top: 30px;
 }

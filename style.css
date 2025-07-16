@@ -20,7 +20,7 @@ header {
     #140e5e,
     #2e003e
   );
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: flex;
   justify-content: space-between;
